@@ -42,6 +42,7 @@ cd back-clone
 ```
 
 ### 1. single folder backup
+Just call the script with necessary arguments (see below):
 ```
 ./script/rclone-check-PID-launch.sh \
     $LOCAL_DIR \
