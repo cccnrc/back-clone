@@ -42,7 +42,7 @@ cd back-clone
 ```
 
 ### 1. single folder backup
-Just call the script with necessary arguments (see below):
+Just call the script with necessary arguments (see [below](https://github.com/cccnrc/back-clone#11-local_dir)):
 ```
 ./script/rclone-check-PID-launch.sh \
     $LOCAL_DIR \
@@ -77,4 +77,4 @@ You can create a [TSV file](https://en.wikipedia.org/wiki/Tab-separated_values) 
 - `LOCAL_DIR`: at column 1
 - `CLOUD_DIR`: at column 2
 - `PROCESS_NAME`: at column 3 (optional)
-the script will launch the backup for each folder and store logs into [logs/](logs) with the name of the `$INPUT_TSV` file (removing `.tsv` extension)
+the script will launch the backup for each folder and store logs into [logs/](logs) with the name of the `$INPUT_TSV` file (removing `.tsv` extension). As example, if your `INPUT_TSV` file is called `folders-backup.tsv` you will find logs into `logs/folders-backup.log`. Moreover, any single backup will have its logs into `logs/PROCESS_NAME.log`
