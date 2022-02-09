@@ -46,10 +46,10 @@ echo -e "#PROCESS\tPID\tSTART" >> $LOG_FILE
 cat $LOG_FILE | head -3     ### print to STDOUT
 echo
 
-i=1
+NROW=1
 while read -r LINE; do
 
-  NROW=$(( i+1 ))
+  NROW=$(( NROW+1 ))
 
   ### check all body rows have exactly 3 columns
   NCOL=$( echo "${LINE}" | awk '{ print NF }' )

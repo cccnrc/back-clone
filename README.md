@@ -54,7 +54,9 @@ Just call the script with necessary arguments (see [below](https://github.com/cc
     $CLOUD_DIR \
     $PROCESS_NAME
 ```
-***note***: this command returns the PID of the job
+- ***note***: this command returns the PID of the job
+
+Have a look at [your Google Drive](https://drive.google.com/drive/my-drive) and you'll see them :sunglasses:
 
 #### 1.1. `LOCAL_DIR`
 you have to set this to the path of the local directory you want to backup. As example:
@@ -112,6 +114,20 @@ rclone-launcher.sh test
 ***note***: the above solution stores this into your `~/.bashrc` file, so it will be valid for any other terminal window you open from now on :sunglasses:
 
 ---
+## Check Status
+You can check ***status*** (running/completed) of ***all*** your backup jobs with a ***single script***.
+
+Let's say you exported [scripts](script) to your `$PATH` (as explained [here](https://github.com/cccnrc/back-clone#3-store-it-in-path)):
+```
+back-clone-check.sh
+```
+If you want to check the status of a ***single*** job just specify its name:
+```
+back-clone-check.sh PROCESS_NAME
+```
+Isn't that cool?! :sunglasses:
+
+---
 ## Update
 You can easily use [back-clone](https://github.com/cccnrc/back-clone) to keep your backups updated. As example, you can store the command to backup a folder into your `./bashrc` file: anytime a new terminal window is open it will update that folder :wink:
 ```
@@ -119,11 +135,11 @@ echo "/home/back-clone/script/rclone-launcher $INPUT_TSV" >> ~/.bashrc
 ```
 You can also set a [crontab job](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) to be executed every day, or hour etc.
 
-There are **bilions** of other possibilities, ***explore them***! :rocket: (and let us now when you find a nice one :smile:)
+There are **bilions** of other possibilities, ***explore them***! :rocket:
 
 ---
 ## Overlaps
-Don't worry about overlaps, through the ***PID manager*** (a file called `rclone-PID-map.tsv` you'll find inside [logs](logs) once you started your first backup) [back-clone](https://github.com/cccnrc/back-clone) checks if the previous job (with the same `PROCESS_NAME` is terminated, if not you will find the `PID` which is running the job with a `(running)` flag) :sunglasses:
+Don't worry about backup overlaps, through the ***PID manager*** (a file called `rclone-PID-map.tsv` you'll find inside [logs](logs) once you started your first backup) [back-clone](https://github.com/cccnrc/back-clone) checks if the previous job (with the same `PROCESS_NAME` is terminated, if not you will find the `PID` which is running the job with a `(running)` flag) :sunglasses:
 
 ---
 ### Closure
