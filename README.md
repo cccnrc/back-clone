@@ -33,8 +33,8 @@ chmod +x ./script/*
 ---
 ## Usage
 You can choose two different ways to use [back-clone](https://github.com/cccnrc/back-clone):
-1. single folder backup
-2. multiple folders backup
+1. [single folder backup](https://github.com/cccnrc/back-clone#1-single-folder-backup)
+2. [multiple folders backup](https://github.com/cccnrc/back-clone#2-multiple-folders-backup)
 
 ***note***: to use [back-clone](https://github.com/cccnrc/back-clone) you need to be inside the directory you cloned from this repository:
 ```

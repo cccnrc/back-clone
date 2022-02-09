@@ -1,5 +1,6 @@
-logs/*
-
 ### ignore everything in input/ but input/process.tsv-HEADER
 input/*
 !input/process.tsv-HEADER
+
+logs/*
+!logs/.gitkeep
