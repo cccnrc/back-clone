@@ -2,6 +2,12 @@
 
 PROCESS_TSV=$1      ### path of the TSV file with directories to backup and cloud paths
 
+### it test print this output
+if [[ "$PROCESS_TSV" == 'test' ]]; then
+  echo -e "\n  Your back-clone scripts are working :)\n"
+  exit 0
+fi
+
 ### get the DIR in which this script lives
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 ### LOG_FILE is in logs folder and hase the same name of PROCESS_TSV but with log extension
